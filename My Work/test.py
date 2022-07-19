@@ -1,6 +1,13 @@
-my_tuple = (2, 4, 6)
-my_list = [10, 20, 30, 40]
-length = len(my_tuple)
-for index in range(0, length):
-  my_list[index] = my_list[index] + my_tuple[index]
-print(my_list)
+def magic(abra, cadabra):
+  abra = abra + cadabra
+  print(abra)
+  confusion(abra, cadabra)
+def confusion(cadabra, word1):
+  confused = abra + cadabra
+  print(confused)
+def main():
+  word1 = input('Enter a word >')
+  word2 = input('Enter a word >')
+  magic(word1, word2)
+  print(word1, word2)
+main()
