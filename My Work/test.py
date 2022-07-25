@@ -1,13 +1,17 @@
-def magic(abra, cadabra):
-  abra = abra + cadabra
-  print(abra)
-  confusion(abra, cadabra)
-def confusion(cadabra, word1):
-  confused = abra + cadabra
-  print(confused)
+def reverse(word):
+    my_list = list(word)
+    my_list.reverse()
+    reverse_string = ''.join(my_list)
+    return reverse_string
+def elaborate(word_list, word):
+    reversed = reverse(word)
+    word_list = word_list.insert(0, word)
+    word_list.append(reversed)  
 def main():
-  word1 = input('Enter a word >')
-  word2 = input('Enter a word >')
-  magic(word1, word2)
-  print(word1, word2)
+    words = []
+    word = input('Enter a word >')
+    while word != 'stop':
+        elaborate(words, word)
+        word = input('Enter a word >')
+    print(words)
 main()
